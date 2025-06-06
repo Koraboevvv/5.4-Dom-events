@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="./src/output.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body >
         <header class="py-[24px] shadow-md">
-      <div class="containers flex items-center justify-between">
+      <div class="containers flex items-center justify-between ">
         <h1 class="text-[24px] text-[#111517] font-extrabold">
           Where in the world?
         </h1>
-        <div class="flex items-center gap-[30px]">
+        <div class="flex items-center gap-[30px] ">
           <button class="flex cursor-pointer items-center gap-[10px]">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="max-[700px]:hidden">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.754.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 13.815Z" fill="white" stroke="#111517" stroke-width="1.25" />
             </svg>
-            <span class="text-[#111517] text-[16px] font-semibold">Liked (0)</span>
+            <span class="text-[#111517] text-[16px] font-semibold max-[700px]:hidden ">Liked (0)</span>
           </button>
           <button class="flex cursor-pointer items-center gap-[10px]">
-            <svg width="20"height="20"viewBox="0 0 20 20"fill="none"xmlns="http://www.w3.org/2000/svg">
+            <svg width="20"height="20"viewBox="0 0 20 20"fill="none"xmlns="http://www.w3.org/2000/svg" class="max-[700px]:hidden">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.754.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 13.815Z" fill="white" stroke="#111517"
                 stroke-width="1.25"
               />
             </svg>
-            <span class="text-[#111517] text-[16px] font-semibold">Saved (0)</span>
+            <span class="text-[#111517] text-[16px] font-semibold max-[700px]:hidden">Saved (0)</span>
           </button>
           <button class="flex cursor-pointer items-center gap-[10px]">
             <svg width="20"height="20"viewBox="0 0 20 20"fill="none"xmlns="http://www.w3.org/2000/svg">
@@ -40,8 +40,8 @@
     </header>
       <main class="mt-[48px]">
       <section>
-        <div class="containers">
-          <div class="flex items-center justify-between">
+        <div class="containers max-[1000px]:py-[10px]">
+          <div class="flex items-center justify-between max-[1000px]:block">
             <input  autocomplete="off" class="search-input border-[1px] border-slate-300 py-[18px] pl-[74px] w-[480px] outline-none shadow-md text-[18px] rounded-[5px]" type="text" name="search" placeholder="Search for a country..."
             /> 
             <select

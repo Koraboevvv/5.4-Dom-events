@@ -7,7 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-300: oklch(86.9% 0.022 252.894);
     --spacing: 0.25rem;
@@ -230,17 +232,11 @@
   .gap-\[30px\] {
     gap: 30px;
   }
-  .rounded-\[1px\] {
-    border-radius: 1px;
-  }
   .rounded-\[5px\] {
     border-radius: 5px;
   }
   .rounded-\[10px\] {
     border-radius: 10px;
-  }
-  .rounded-\[100px\] {
-    border-radius: 100px;
   }
   .rounded-md {
     border-radius: var(--radius-md);
@@ -259,6 +255,9 @@
   }
   .border-slate-300 {
     border-color: var(--color-slate-300);
+  }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
   }
   .object-cover {
     object-fit: cover;
@@ -285,6 +284,9 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-\[6px\] {
+    font-size: 6px;
+  }
   .text-\[16px\] {
     font-size: 16px;
   }
@@ -293,6 +295,9 @@
   }
   .text-\[24px\] {
     font-size: 24px;
+  }
+  .text-\[36px\] {
+    font-size: 36px;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -319,12 +324,6 @@
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-blue-500 {
-    --tw-shadow-color: oklch(62.3% 0.214 259.815);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-blue-500) var(--tw-shadow-alpha), transparent);
-    }
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -363,6 +362,21 @@
       background-color: var(--color-slate-300);
     }
   }
+  .max-\[1000px\]\:block {
+    @media (width < 1000px) {
+      display: block;
+    }
+  }
+  .max-\[1000px\]\:py-\[10px\] {
+    @media (width < 1000px) {
+      padding-block: 10px;
+    }
+  }
+  .max-\[700px\]\:hidden {
+    @media (width < 700px) {
+      display: none;
+    }
+  }
   .min-\[500px\]\:grid-cols-2 {
     @media (width >= 500px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -378,9 +392,9 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
-  .dark\:bg-\[\#2B3844\] {
+  .dark\:bg-amber-950 {
     @media (prefers-color-scheme: dark) {
-      background-color: #2B3844;
+      background-color: var(--color-amber-950);
     }
   }
 }
@@ -388,6 +402,7 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 20px;
 }
 @property --tw-border-style {
   syntax: "*";
