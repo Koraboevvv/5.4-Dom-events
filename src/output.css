@@ -11,6 +11,7 @@
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-300: oklch(86.9% 0.022 252.894);
     --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
@@ -180,11 +181,17 @@
   .mt-\[48px\] {
     margin-top: 48px;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -227,6 +234,9 @@
   }
   .gap-\[10px\] {
     gap: 10px;
+  }
+  .gap-\[20px\] {
+    gap: 20px;
   }
   .gap-\[30px\] {
     gap: 30px;
@@ -422,6 +432,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .sm\:gap-\[30px\] {
+    @media (width >= 40rem) {
+      gap: 30px;
+    }
+  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -432,6 +447,16 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .dark\:block {
+    &:where(.dark, .dark *) {
+      display: block;
+    }
+  }
+  .dark\:hidden {
+    &:where(.dark, .dark *) {
+      display: none;
+    }
+  }
   .dark\:bg-\[\#202C36\] {
     &:where(.dark, .dark *) {
       background-color: #202C36;
@@ -440,6 +465,11 @@
   .dark\:text-\[\#fff\] {
     &:where(.dark, .dark *) {
       color: #fff;
+    }
+  }
+  .dark\:text-white {
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
     }
   }
   .dark\:shadow-amber-50 {
@@ -455,6 +485,51 @@
       --tw-shadow-color: #000;
       @supports (color: color-mix(in lab, red, red)) {
         --tw-shadow-color: color-mix(in oklab, var(--color-black) var(--tw-shadow-alpha), transparent);
+      }
+    }
+  }
+  .dark\:hover\:text-\[\#000\] {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: #000;
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-\[\#\] {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: #;
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-\[\#ddd\] {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: #ddd;
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-\[\#fff\] {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-\[\#ooo\] {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: #ooo;
+        }
       }
     }
   }

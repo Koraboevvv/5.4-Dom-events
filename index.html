@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" data-theme="dark" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,29 +13,33 @@
         <h1 class="text-[24px] dark:text-[#fff] text-[#111517] font-extrabold max-[500px]:text-[14px]">
           Where in the world?
         </h1>
-        <div class="flex items-center gap-[30px] ">
-          <button class="flex cursor-pointer items-center gap-[10px]">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="max-[700px]:hidden">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.754.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 13.815Z" fill="white" stroke="#111517" stroke-width="1.25" />
-            </svg>
-            <span class="text-[#111517] text-[16px] font-semibold max-[700px]:hidden ">Liked (0)</span>
-          </button>
-          <button class="flex cursor-pointer items-center gap-[10px]">
-            <svg width="20"height="20"viewBox="0 0 20 20"fill="none"xmlns="http://www.w3.org/2000/svg" class="max-[700px]:hidden">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.754.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 13.815Z" fill="white" stroke="#111517"
-                stroke-width="1.25"
-              />
-            </svg>
-            <span class="text-[#111517] text-[16px] font-semibold max-[700px]:hidden">Saved (0)</span>
-          </button>
-          <button class="flex cursor-pointer items-center gap-[10px]">
+        				<div class="flex items-center gap-[20px] sm:gap-[30px]">
+					<button
+						onclick="likeBtn()"
+						class="likeBtn flex cursor-pointer items-center gap-[10px]"
+					>
+						<span
+							class="text-[#111517] text-[16px] font-semibold dark:text-white"
+							>Liked (<span class="forLikeClass">0</span>)</span
+						>
+					</button>
+					<button
+						onclick="saveBtn()"
+						class="flex cursor-pointer items-center gap-[10px]"
+					>
+						<span
+							class="text-[#111517] text-[16px] font-semibold dark:text-white"
+							>Saved (<span class="forSaveClass">0</span>)</span
+						>
+					</button>
+					          <button class="flex cursor-pointer items-center gap-[10px]">
             <svg width="20"height="20"viewBox="0 0 20 20"fill="none"xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"clip-rule="evenodd"d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.754.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 13.815Z"fill="white"stroke="#111517"stroke-width="1.25"
               />
             </svg>
-            <span class="dark:text-[#fff] text-[#111517] text-[16px] font-semibold max-[500px]:text-[12px]" onclick="dark()">Dark Mode</span>
+            <span class="dark:text-[#fff] text-[#111517] text-[16px] font-semibold max-[500px]:text-[12px]" onclick="toggleDarkMode()">Dark Mode</span>
           </button>
-        </div>
+				</div>
       </div>
     </header>
       <main class="mt-[48px]">
@@ -83,7 +87,7 @@
 										More
 									</button>
 									<button
-										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200"
+										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200 "
 									>
 										Save
 									</button>

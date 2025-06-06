@@ -53,18 +53,18 @@ const renderCard = function (arr, list) {
 								<div class="flex items-center gap-[10px] mt-[20px]">
 									<button
 									onclick="countLikeOnclick()"
-										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200"
+										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200 dark:hover:text-[#000]"
 									>
 										Like
 									</button>
 									<button
-										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200"
+										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200 dark:hover:text-[#000]"
 									>
 										More
 									</button>
 									<button
 									onclick="countSaveOnclick()"
-										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200"
+										class="w-[30%] py-[5px] border-[1px] border-slite-500 rounded-md cursor-pointer hover:bg-slate-200 active:bg-slate-300 active:scale-95 transition-transform duration-200 dark:hover:text-[#000]"
 									>
 										Save
 									</button>
@@ -91,5 +91,23 @@ const inputElOnclick = function () {
 	if (!userInputValue.trim()) return null
 	let filterEL = countries.filter(i => i.name.toLowerCase() == userInputValue.toLowerCase())
 	renderCard(filterEL, counter_listEl)
-	// inputEl.value = ""
+
 }
+
+function toggleDarkMode() {
+      const htmlElement = document.documentElement;
+      if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    const userTheme = localStorage.getItem('theme');
+    if (userTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else if (userTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+    }
