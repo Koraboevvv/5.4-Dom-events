@@ -36,8 +36,8 @@ const renderCard = function (arr, list) {
 		let elItm = document.createElement("li")
 		list.appendChild(elItm)
 		elItm.outerHTML = `	
-        				<li class="rounded-[10px] shadow-md rounded-b-md" data-aos="fade-up">
-							<img src=${item.flag} alt="" class="h-[160px] object-cover w-full"/>
+        				<li class="rounded-[10px] shadow-md dark:shadow-black " data-aos="fade-up">
+							<img src=${item.flag} alt="" class="h-[160px] rounded-t-[6px] object-cover w-full"/>
 							<div class="p-[15px]">
 								<strong class="text-xl">${item.name}</strong>
 								<p class="font-bold mt-3">
