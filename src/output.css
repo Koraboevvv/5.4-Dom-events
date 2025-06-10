@@ -397,6 +397,11 @@
       padding-block: 10px;
     }
   }
+  .max-\[850px\]\:hidden {
+    @media (width < 850px) {
+      display: none;
+    }
+  }
   .max-\[700px\]\:hidden {
     @media (width < 700px) {
       display: none;
@@ -460,6 +465,21 @@
   .dark\:bg-\[\#202C36\] {
     &:where(.dark, .dark *) {
       background-color: #202C36;
+    }
+  }
+  .dark\:text-\[\#000\] {
+    &:where(.dark, .dark *) {
+      color: #000;
+    }
+  }
+  .dark\:text-\[\#Fff\] {
+    &:where(.dark, .dark *) {
+      color: #Fff;
+    }
+  }
+  .dark\:text-\[\#ff\] {
+    &:where(.dark, .dark *) {
+      color: #ff;
     }
   }
   .dark\:text-\[\#fff\] {

@@ -1,6 +1,5 @@
 let elSelect = document.querySelector(".capital-choose")
 let counter_listEl = document.querySelector(".country-list")
-let inputEl = document.querySelector(".search-input")
 const countLike = document.querySelector(".forLikeClass")
 const countSave = document.querySelector(".forSaveClass")
 
@@ -9,13 +8,13 @@ let count = 0
 const countLikeOnclick = function () {
 	count++
 	countLike.textContent = count
-	count >= 10 ? countLike.textContent = "10" : count
+	count >= 20 ? countLike.textContent = "20" : count
 }
 let count1 = 0
 const countSaveOnclick = function () {
 	count1++
 	countSave.textContent = count1
-	count1 >= 10 ? countSave.textContent = "10" : count1
+	count1 >= 20 ? countSave.textContent = "20" : count1
 }
 
 
@@ -86,13 +85,6 @@ elSelect.addEventListener("change", function (evn) {
 	}
 })
 
-const inputElOnclick = function () {
-	let userInputValue = inputEl.value
-	if (!userInputValue.trim()) return null
-	let filterEL = countries.filter(i => i.name.toLowerCase() == userInputValue.toLowerCase())
-	renderCard(filterEL, counter_listEl)
-
-}
 
 function toggleDarkMode() {
       const htmlElement = document.documentElement;
